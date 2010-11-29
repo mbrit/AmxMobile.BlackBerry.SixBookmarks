@@ -1,0 +1,80 @@
+package com.amxmobile.SixBookmarks;
+
+import net.rim.device.api.ui.Field;
+import net.rim.device.api.ui.FieldChangeListener;
+import net.rim.device.api.ui.component.ButtonField;
+import net.rim.device.api.ui.component.CheckboxField;
+import net.rim.device.api.ui.component.EditField;
+import net.rim.device.api.ui.component.LabelField;
+import net.rim.device.api.ui.component.PasswordEditField;
+import net.rim.device.api.ui.container.MainScreen;
+
+import com.amxmobile.SixBookmarks.Runtime.ErrorBucket;
+import com.amxmobile.SixBookmarks.Runtime.MessageBox;
+
+public class LogonForm extends MainScreen implements FieldChangeListener
+{
+	private EditField _usernameTextBox;
+	private PasswordEditField _passwordTextBox;
+	private CheckboxField _rememberMeCheckBox;
+	private ButtonField _logonButton;
+
+	public LogonForm()
+	{
+		super();
+		
+		// title...
+		setTitle(new LabelField("Welcome to Six Bookmarks"));
+		
+		// controls...
+		this.add(new LabelField("Username"));
+		_usernameTextBox = new EditField();
+		this.add(_usernameTextBox);
+		
+		this.add(new LabelField("Password"));
+		_passwordTextBox = new PasswordEditField();
+		this.add(_passwordTextBox);
+		
+		_rememberMeCheckBox = new CheckboxField("Remember me", true);
+		this.add(_rememberMeCheckBox);
+		
+		_logonButton = new ButtonField("Logon", ButtonField.CONSUME_CLICK);
+		_logonButton.setChangeListener(this);
+		this.add(_logonButton);
+	}
+
+	public void fieldChanged(Field field, int context)
+	{
+		try
+		{
+			if(field == _logonButton)
+				HandleLogon();
+		}
+		catch(Exception ex)
+		{
+			MessageBox.Show(ex);
+		}
+	}
+
+	private void HandleLogon() throws Exception
+	{
+		ErrorBucket bucket = new ErrorBucket();
+		String username = _usernameTextBox.getText().trim();
+		if(username == null || username.length() == 0)
+			bucket.AddError("Username not specified");
+		String password = _passwordTextBox.getText();
+		if(password == null || password.length() == 0)
+			bucket.AddError("Password not specified");
+		
+		// errors?
+		if(!(bucket.getHasErrors()))
+			DoLogon(username, password, _rememberMeCheckBox.getChecked());
+		else
+			MessageBox.Show(bucket.GetAllErrors());
+	}
+
+	private void DoLogon(String username, String password, boolean checked) throws Exception
+	{
+		throw new Exception("Not implemented.");
+	}
+}

@@ -1,0 +1,125 @@
+package com.amxmobile.SixBookmarks.Database;
+
+import java.util.Vector;
+
+import com.amxmobile.SixBookmarks.Entities.Entity;
+import com.amxmobile.SixBookmarks.Entities.EntityField;
+import com.amxmobile.SixBookmarks.Entities.EntityType;
+
+public class SqlFilter implements ISqlStatementSource
+{
+	public static final int OPERATOR_EQUALTO = 0;
+	public static final int OPERATOR_NOTEQUALTO = 1;
+
+	private EntityType _entityType;
+	
+	private Vector _constraints = new Vector(); 
+	
+	public SqlFilter(Class type) throws Exception
+	{
+		this(EntityType.GetEntityType(type));
+	}
+	
+	public SqlFilter(EntityType et)
+	{
+		_entityType = et;
+	}
+	
+	private EntityType getEntityType()
+	{
+		return _entityType;
+	}
+	
+	public SqlStatement GetSqlStatement() throws Exception
+	{
+		SqlStatement sql = new SqlStatement();
+		StringBuffer builder = new StringBuffer();
+		
+		// et...
+		EntityType et = getEntityType();
+		
+		// columns...
+		builder.append("SELECT ");
+		Vector fields = et.getFields();
+		for(int index = 0; index < fields.size(); index++)
+		{
+			if(index > 0)
+				builder.append(", ");
+			builder.append(fields.get(index).getNativeName());
+		}
+		
+		// from...
+		builder.append(" FROM ");
+		builder.append(et.getNativeName());
+		
+		// where...
+		Vector constraints = getConstraints(); 
+		if(constraints.size() > 0) 
+		{
+			builder.append(" WHERE ");
+			for(int index = 0; index < constraints.size(); index++)
+			{
+				if(index > 0)
+					builder.append(" AND ");
+				((SqlConstraint)constraints.elementAt(index)).Append(sql, builder);
+			}
+		}
+		
+		// return...
+		sql.setCommandText(builder.toString());
+		return sql;
+	}
+
+	private Vector getConstraints()
+	{
+		return _constraints;
+	}
+
+	public void AddConstraint(String name, int value) throws Exception 
+	{
+		AddConstraint(name, new Integer(value));
+	}
+
+	public void AddConstraint(String name, boolean value) throws Exception 
+	{
+		AddConstraint(name, new Boolean(value));
+	}
+
+	public void AddConstraint(String name, Object value) throws Exception 
+	{
+		EntityField field = getEntityType().GetField(name, true);
+		AddConstraint(field, value);
+	}
+	
+	public void AddConstraint(EntityField field, Object value)
+	{
+		getConstraints().addElement(new SqlFieldConstraint(field, value));
+	}
+
+	public void AddConstraint(String name, int operator, Object value) throws Exception 
+	{
+		EntityField field = getEntityType().GetField(name, true);
+		AddConstraint(field, operator, value);
+	}
+	
+	public void AddConstraint(EntityField field, int operator, Object value)
+	{
+		getConstraints().addElement(new SqlFieldConstraint(field, operator, value));
+	}
+
+	public Vector ExecuteEntityCollection() throws Exception 
+	{
+		// shortcut method - defer to the helper...
+		DatabaseHelper db = new DatabaseHelper();
+		return db.ExecuteEntityCollection(this, getEntityType());
+	}
+	
+	public Entity ExecuteEntity() throws Exception
+	{
+		Vector items = ExecuteEntityCollection();
+		if(items.size() > 0)
+			return (Entity)items.elementAt(0);
+		else
+			return null;
+	}
+}

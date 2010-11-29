@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.scroll.lineDown",1290250299482
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.scroll.lineDown",1290250299520
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.scroll.lineDown",1290250299556
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.scroll.lineDown",1290250299589
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.scroll.lineDown",1290250299626
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.scroll.lineDown",1290250299663
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.scroll.lineDown",1290250299701
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.scroll.lineDown",1290250299738
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.scroll.lineDown",1290250299775
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.scroll.lineDown",1290250299812
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.goto.lineStart",1290250301148
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.goto.lineStart",1290250301339
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290250303355
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290250304631
+executed,command,org.eclipse.debug.ui,3.5.0.v20090603,"org.eclipse.debug.ui.commands.DebugLast",1290250304647
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290250304723
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290250305276
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290250305638
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290250305688
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290250305795
+activated,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1290250305886
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290250306531
+error,log,,,"No project to be deployed.",1290250306628
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290250306784
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290250307906

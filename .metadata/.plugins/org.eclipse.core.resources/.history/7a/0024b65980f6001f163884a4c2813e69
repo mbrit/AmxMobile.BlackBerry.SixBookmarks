@@ -1,0 +1,40 @@
+package com.amxmobile.SixBookmarks.Services;
+
+public class LogonResponse 
+{
+	public final static int RESULT_OK = 0;
+	public final static int RESULT_INVALID_USERNAME = 1;
+	public final static int RESULT_INVALID_PASSWORD = 2;
+	public final static int RESULT_USER_INACTIVE = 3;
+	
+	private String _token;
+	private String _message;
+	private int _result;
+	
+	public LogonResponse(int result, String message, String token)
+	{
+		_result = result;
+		_message = message;
+		_token = token;
+	}
+	
+	public String getMessage()
+	{		
+		return _message;
+	}
+	
+	public String getToken()
+	{		
+		return _token;
+	}
+	
+	public int getResult()
+	{
+		return _result;
+	}
+	
+	public static int ParseLogonResult(String asString) throws Exception
+	{
+		throw new Exception("Not implemented.");
+	}
+}

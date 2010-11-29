@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,org.eclipse.debug.ui,3.5.0.v20090603,"org.eclipse.debug.ui.commands.DebugLast",1290252938434
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290252938495
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290252939167
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290252939543
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290252941462
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290252951086
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290252957130
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290252957904
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290252959200
+executed,command,org.eclipse.debug.ui,3.5.0.v20090603,"org.eclipse.debug.ui.commands.DebugLast",1290252959222
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290252961274
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290252974742
+activated,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1290252978612
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290252991947
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290252994055
+error,log,,,"Failed to connect to remote VM",1290252994166
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290252994186
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290252996058
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1290252996776
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290252997709
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290252999315
+executed,command,org.eclipse.debug.ui,3.5.0.v20090603,"org.eclipse.debug.ui.commands.DebugLast",1290252999324
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290253000095
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290253033062
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290253033771

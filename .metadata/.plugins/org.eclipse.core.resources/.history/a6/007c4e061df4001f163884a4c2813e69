@@ -1,0 +1,39 @@
+package com.amxmobile.SixBookmarks.Runtime;
+
+import java.util.Vector;
+
+public class ErrorBucket 
+{
+	private Vector _errors = new Vector();
+	
+	public ErrorBucket()
+	{
+	}
+	
+	public void AddError(String error)
+	{
+		this._errors.addElement(error);
+	}
+	
+	public boolean getHasErrors()
+	{
+		if(this._errors.size() > 0)
+			return true;
+		else
+			return false;
+	}
+	
+	public String GetAllErrors()
+	{
+		StringBuffer builder = new StringBuffer();
+		for(int index = 0; index < _errors.size(); index++)
+		{
+			if(builder.length() > 0)
+				builder.append("\n");
+			builder.append(_errors.get(index));
+		}
+		
+		// return...
+		return builder.toString();
+	}
+}

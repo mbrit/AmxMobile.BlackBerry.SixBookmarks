@@ -1,0 +1,14 @@
+package com.amxmobile.SixBookmarks.Database;
+
+import com.amxmobile.SixBookmarks.LogonForm;
+
+public class Sync
+{
+
+	public void DoSync(LogonForm logonForm)
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+}

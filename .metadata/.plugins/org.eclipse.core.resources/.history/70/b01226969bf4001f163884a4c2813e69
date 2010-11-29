@@ -1,0 +1,195 @@
+package com.amxmobile.SixBookmarks.Database;
+
+import java.util.Vector;
+
+import javax.microedition.global.Formatter;
+
+import net.rim.device.api.database.Database;
+import net.rim.device.api.database.DatabaseFactory;
+import net.rim.device.api.database.Statement;
+
+import com.amxmobile.SixBookmarks.Entities.EntityField;
+import com.amxmobile.SixBookmarks.Entities.EntityType;
+
+public class DatabaseHelper
+{
+	private static Vector _loadMap = new Vector();
+	
+	private static String DatabaseName = null;
+	
+	public DatabaseHelper()
+	{
+	}
+
+	public static void setUser(String username)
+	{
+		DatabaseName = "SixBookmarks-" + username;
+	}
+
+	private SqlStatement GetCreateScript(EntityType et) throws Exception
+	{
+		StringBuffer builder = new StringBuffer();
+		builder.append("CREATE TABLE IF NOT EXISTS ");
+		builder.append(et.getNativeName());	// now the columns...
+		builder.append(" (");
+		Vector fields = et.getFields(); 
+		for(int index = 0; index < fields.size(); index++)
+		{
+			if(index > 0)
+				builder.append(", ");
+			
+			// defer...
+			AppendCreateSnippet(builder, (EntityField)fields.elementAt(index)); 
+		}
+		builder.append(")");
+		
+		// return...
+		return new SqlStatement(builder.toString());
+	}
+	
+	private void AppendCreateSnippet(StringBuffer builder, EntityField field) throws Exception
+	{
+		builder.append(field.getNativeName());
+		builder.append(" ");
+		
+		// switch...
+		int type = field.getDataType();
+		if(type == EntityField.DATATYPE_STRING)
+		{
+			builder.append("varchar(");
+			builder.append(field.getSize());
+			builder.append(")");
+		}
+		else if(type == EntityField.DATATYPE_INT32)
+		{
+			builder.append("integer");
+			
+			// key?
+			if(field.getIsKey())
+				builder.append(" primary key autoincrement");
+		}
+		else
+			throw new Exception(Formatter.formatMessage("Cannot handle '{0}'.", new String[] { new Integer(field.getDataType()).toString() }));
+	}
+
+	public void EnsureTableExists(EntityType et) throws Exception
+	{
+		// have we already called it?
+		String name = et.getName();
+		if(_loadMap.contains(name))
+			return;
+		
+		// create...
+		SqlStatement sql = GetCreateScript(et);
+		ExecuteNonQuery(sql, true);
+		
+		// add...
+		_loadMap.addElement(name);
+	}
+	
+	public void ExecuteNonQuery(ISqlStatementSource sql, boolean writable) throws Exception
+	{
+		// open...
+		Database db = DatabaseFactory.create(DatabaseName);
+		Statement statement = null;
+		try
+		{
+			statement = GetRealSqlStatement(db, sql);
+			statement.execute();
+		}
+		finally
+		{
+			if(statement != null)
+				statement.close();
+			if(db != null)
+				db.close();
+		}
+	}
+
+	private Statement GetRealSqlStatement(Database db, ISqlStatementSource sql) throws Exception
+	{
+		SqlStatement wrapped = sql.GetSqlStatement();
+		return GetRealSqlStatement(db, wrapped);
+	}	
+	
+	private Statement GetRealSqlStatement(Database db, SqlStatement sql) throws Exception
+	{
+		Statement real = db.createStatement(sql.getCommandText());
+		
+		// populate params...
+		
+		// return..
+		return real;
+	}
+
+	public Vector ExecuteEntityCollection(ISqlStatementSource sql, EntityType et) throws Exception
+	{
+		EnsureTableExists(et);
+		
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+//	public ArrayList<Entity> ExecuteEntityCollection(ISqlStatementSource sql, EntityType et) throws Exception
+//	{
+//		// get...
+//		SqlStatement realSql = sql.GetSqlStatement();
+//		SQLiteDatabase db = getReadableDatabase();
+//		Cursor c = null;
+//		try
+//		{
+//			// execute a cursor...
+//			ArrayList<Entity> results = et.CreateCollectionInstance();
+//			
+//			// cursor...
+//			c = db.rawQuery(realSql.getCommandText(), MangleParameterValues(realSql.getParameterValues()));
+//			while(c.moveToNext())
+//			{
+//				// load...
+//				Entity entity = LoadEntity(c, et);
+//				results.add(entity);
+//			}
+//			
+//			// return...
+//			return results;
+//		}
+//		finally
+//		{
+//			if(c != null)
+//				c.close();
+//			if(db != null)
+//				db.close();
+//		}
+//	}
+//	
+//	private String[] MangleParameterValues(Object[] values)
+//	{
+//		String[] args = new String[values.length];
+//		for(int index = 0; index < values.length; index++)
+//			args[index] = values[index].toString();
+//		
+//		// return...
+//		return args;
+//	}
+//	
+//	private Entity LoadEntity(Cursor c, EntityType et) throws Exception
+//	{
+//		// create a new instance...
+//		Entity entity = et.CreateInstance();
+//		
+//		// load data...
+//		for(EntityField field : et.getFields())
+//		{
+//			DataType type = field.getDataType();
+//			if(type == DataType.String)
+//				entity.SetValue(field, c.getString(field.getOrdinal()), SetReason.Load);
+//			else if(type == DataType.Int32)
+//				entity.SetValue(field, c.getInt(field.getOrdinal()), SetReason.Load);
+//			else
+//				throw new Exception(String.format("Cannot handle '%s'.", field.getDataType())); 
+//		}
+//		
+//		// return...
+//		return entity;
+//	}
+}

@@ -1,0 +1,6 @@
+package com.amxmobile.SixBookmarks.Database;
+
+public class SqlConstraint
+{
+
+}

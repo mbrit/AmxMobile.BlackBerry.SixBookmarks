@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290197637128
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290197638189
+activated,view,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.PackageExplorer",1290197642974
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1290197643196
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.text.contentAssist.proposals",1290197663279
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.text.contentAssist.proposals",1290197670362
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.goto.lineStart",1290197672550
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.goto.lineStart",1290197672672
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290197673845
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290197674317
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.text.contentAssist.proposals",1290197676713
+error,log,,,"Could not retrieve declared methods",1290197679141
+error,log,,,"Could not retrieve declared methods",1290197679144
+error,log,,,"Could not retrieve declared methods",1290197679145
+error,log,,,"Could not retrieve declared methods",1290197679146
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.undo",1290197680177
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.copy",1290197681880
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.paste",1290197684803
+executed,command,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.edit.text.java.organize.imports",1290197685792
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290197690970
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290197692920
+executed,command,org.eclipse.debug.ui,3.5.0.v20090603,"org.eclipse.debug.ui.commands.DebugLast",1290197692938
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290197692986
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290197693709
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290197694026

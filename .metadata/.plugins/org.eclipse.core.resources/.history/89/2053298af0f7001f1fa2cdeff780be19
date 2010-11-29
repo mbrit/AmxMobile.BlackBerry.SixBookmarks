@@ -1,0 +1,8 @@
+package com.amxmobile.SixBookmarks.Data;
+
+import java.util.Vector;
+
+public class BookmarkCollection extends Vector
+{
+
+}

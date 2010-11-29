@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+os,sysinfo,,,"win32",1290196535594
+arch,sysinfo,,,"x86",1290196535594
+ws,sysinfo,,,"win32",1290196535594
+locale,sysinfo,,,"en_GB",1290196535594
+processors,sysinfo,,,"4",1290196535595
+java.runtime.name,sysinfo,,,"Java(TM) SE Runtime Environment",1290196535595
+java.runtime.version,sysinfo,,,"1.6.0_22-b04",1290196535595
+java.specification.name,sysinfo,,,"Java Platform API Specification",1290196535595
+java.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1290196535595
+java.specification.version,sysinfo,,,"1.6",1290196535595
+java.vendor,sysinfo,,,"Sun Microsystems Inc.",1290196535595
+java.version,sysinfo,,,"1.6.0_22",1290196535595
+java.vm.info,sysinfo,,,"mixed mode",1290196535595
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Client VM",1290196535595
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1290196535595
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1290196535595
+java.vm.specification.version,sysinfo,,,"1.0",1290196535595
+java.vm.vendor,sysinfo,,,"Sun Microsystems Inc.",1290196535595
+java.vm.version,sysinfo,,,"17.1-b03",1290196535595
+activated,view,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.PackageExplorer",1290196717370
+activated,view,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.PackageExplorer",1290196717414
+closed,view,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.internal.introview",1290196717441
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290196721288
+started,bundle,org.eclipse.core.filesystem,1.2.0.v20090507,"org.eclipse.core.filesystem",1290196749972
+opened,editor,net.rim.ejde,1.1.2.201004161203-16,"net.rim.ejde.BlackBerryProjectFormEditor",1290196762636

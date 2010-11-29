@@ -1,0 +1,14 @@
+package com.amxmobile.SixBookmarks;
+
+import net.rim.device.api.ui.Screen;
+
+public class NavigatorForm extends Screen
+{
+
+	protected void sublayout(int width, int height)
+	{
+		// TODO Auto-generated method stub
+
+	}
+
+}

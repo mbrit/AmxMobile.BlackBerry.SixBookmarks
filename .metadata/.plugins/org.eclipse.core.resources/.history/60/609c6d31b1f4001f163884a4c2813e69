@@ -1,0 +1,17 @@
+package com.amxmobile.SixBookmarks.Entities;
+
+public class EntityChangeProcessor
+{
+
+	public EntityChangeProcessor(EntityType entityType)
+	{
+		// TODO Auto-generated constructor stub
+	}
+
+	public void SaveChanges(Entity entity)
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+}

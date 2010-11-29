@@ -1,0 +1,3 @@
+INDEX VERSION 1.126+D:\Code\AmxMobile.BlackBerry.SixBookmarks\.metadata\.plugins\org.eclipse.jdt.core
+97645912.index
+3974005579.index

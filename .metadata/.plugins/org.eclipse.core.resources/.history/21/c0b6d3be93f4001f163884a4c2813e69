@@ -1,0 +1,12 @@
+package com.amxmobile.SixBookmarks.Database;
+
+public class DatabaseHelper
+{
+
+	public static void setUser(String username)
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,org.eclipse.ui.ide,3.5.0.I20090525-2000,"org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals",1290249928378
+error,log,,,"Internal Error",1290249929539
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290249929563
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290249931266
+activated,view,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.PackageExplorer",1290249935859
+opened,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1290249937000
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1290249937066
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290249939731
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290249939991
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1290249940057
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.window.nextEditor",1290249940057
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290249944937
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290249957126
+activated,view,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.PackageExplorer",1290249959353
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290249963224
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290249964978
+opened,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1290249965362
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1290249965432
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.paste",1290249966707
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290249967491
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290249973068
+activated,view,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.PackageExplorer",1290249975222
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1290249975432
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.paste",1290249978897
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.goto.textStart",1290249979908

@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290197695449
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290197695535
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290197724872
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290197726383
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290197739319
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290197740918
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290197742639
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290197743466
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290197745278
+executed,command,org.eclipse.debug.ui,3.5.0.v20090603,"org.eclipse.debug.ui.commands.DebugLast",1290197745290
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290197745960
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290197752345
+activated,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1290197753659
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1290197753716
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.goto.lineStart",1290197756419
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.goto.lineStart",1290197756550
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.goto.lineEnd",1290197757550
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.select.wordPrevious",1290197763397
+opened,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.ClassFileEditor",1290197769709
+error,log,,,"Internal Error",1290197769756
+error,log,,,"Internal Error",1290197769787
+error,log,,,"Internal Error",1290197769791
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.ClassFileEditor",1290197769870
+executed,command,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.edit.text.java.open.editor",1290197769914
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1290197773733

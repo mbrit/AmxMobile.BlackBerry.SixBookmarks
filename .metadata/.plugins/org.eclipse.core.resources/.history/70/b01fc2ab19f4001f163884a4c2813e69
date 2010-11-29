@@ -1,0 +1,39 @@
+package com.amxmobile.SixBookmarks;
+
+import net.rim.device.api.ui.Field;
+import net.rim.device.api.ui.component.ButtonField;
+import net.rim.device.api.ui.component.CheckboxField;
+import net.rim.device.api.ui.component.EditField;
+import net.rim.device.api.ui.component.LabelField;
+import net.rim.device.api.ui.container.MainScreen;
+
+public class LogonForm extends MainScreen
+{
+	private EditField _usernameTextBox;
+	private EditField _passwordTextBox;
+	private CheckboxField _rememberMeCheckBox;
+	private ButtonField _logonButton;
+
+	public LogonForm()
+	{
+		super();
+		
+		// title...
+		setTitle(new LabelField("Welcome to Six Bookmarks"));
+		
+		// controls...
+		this.add(new LabelField("Username"));
+		_usernameTextBox = new EditField();
+		this.add(_usernameTextBox);
+		
+		this.add(new LabelField("Password"));
+		_passwordTextBox = new EditField();
+		this.add(_passwordTextBox);
+		
+		_rememberMeCheckBox = new CheckboxField("Remember me", true);
+		this.add(_rememberMeCheckBox);
+		
+		_logonButton = new ButtonField("Logon");
+		this.add(_logonButton);
+	}
+}
