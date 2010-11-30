@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+RIM-COD-Module-Name: com$2eamxmobile$2eSixBookmarks
+RIM-COD-Module-Dependencies: net_rim_cldc,net_rim_xml_org,net_rim_database,net_rim_xml
+MIDlet-Jar-Size: 57905
+MIDlet-1: ,,
+RIM-COD-Creation-Time: 1291099013
+MIDlet-Jar-URL: com.amxmobile.SixBookmarks.jar
+RIM-COD-URL: com$2eamxmobile$2eSixBookmarks.cod
+RIM-COD-SHA1: b9 16 d1 9a c6 20 47 41 de 02 a4 7a 5f 6c 6d 05 e7 87 e0 08
+RIM-COD-Size: 19724
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-Version: 1.0.0
+MIDlet-Name: com.amxmobile.SixBookmarks
+MIDlet-Vendor: BlackBerry Developer
+MicroEdition-Profile: MIDP-2.0
+RIM-MIDlet-Flags-1: 0

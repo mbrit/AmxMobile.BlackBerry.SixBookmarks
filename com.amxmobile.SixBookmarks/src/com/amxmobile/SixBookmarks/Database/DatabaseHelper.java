@@ -127,24 +127,24 @@ public class DatabaseHelper
 	{
 		Statement real = db.createStatement(sql.getCommandText());
 		
+		// prep...
+		real.prepare();
+		
 		// populate params...
 		Object[] params = sql.getParameterValues();
 		for(int index = 0; index < params.length; index++)
 		{
 			Object param = params[index];
 			if(param instanceof String)
-				real.bind(index, (String)param);
-			if(param instanceof Integer)
-				real.bind(index, ((Integer)param).intValue());			
-			if(param instanceof Boolean)
-				real.bind(index, ((Boolean)param).booleanValue());			
+				real.bind(index + 1, (String)param);
+			else if(param instanceof Integer)
+				real.bind(index + 1, ((Integer)param).intValue());			
+			else if(param instanceof Boolean)
+				real.bind(index + 1, ((Boolean)param).booleanValue());			
 			else
 				throw new Exception(Formatter.formatMessage("Cannot handle '{0}'.", new String[] { param.getClass().getName() }));
 		}
 	
-		// prep...
-		real.prepare();
-		
 		// return..
 		return real;
 	}

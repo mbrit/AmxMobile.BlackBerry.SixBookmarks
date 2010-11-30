@@ -84,12 +84,17 @@ public class Sync
 		BookmarkCollection fromServer = service.GetAll();
 
 		// walk the locally updated items…
-		for(Bookmark local : updates)
+		for(int i = 0; i < updates.size(); i++)
 		{
+			Bookmark local = (Bookmark)updates.elementAt(i);
+			
 			// find it in our server set...
 			Bookmark toUpdate = null;
-			for(Bookmark server : fromServer)
+			for(int j = 0; j < fromServer.size(); j++)
 			{
+				Bookmark server = (Bookmark)fromServer.elementAt(j);
+				
+				// what happened?
 				if(local.getOrdinal() == server.getOrdinal())
 				{
 					toUpdate = server;
@@ -102,8 +107,12 @@ public class Sync
 			{
 				// walk the fields...
 				int serverId = 0;
-				for(EntityField field : et.getFields())
+				Vector fields = et.getFields();
+				for(int k = 0; k < fields.size(); k++)
 				{
+					EntityField field = (EntityField)fields.elementAt(k);
+						
+					// what now?
 					if(!(field.getIsKey()))
 						toUpdate.SetValue(field, local.GetValue(field), Entity.SETREASON_USER);
 					else
@@ -121,11 +130,16 @@ public class Sync
 		}
 		
 		// what about ones to delete?
-		for(Bookmark local : deletes)
+		for(int i = 0; i < deletes.size(); i++)
 		{
+			Bookmark local = (Bookmark)deletes.elementAt(i);
+				
 			// find a matching ordinal on the server...
-			for(Bookmark server : fromServer) 
+			for(int j = 0; j < fromServer.size(); j++)
 			{
+				Bookmark server = (Bookmark)fromServer.elementAt(j);
+				
+				// delete?
 				if(local.getOrdinal() ==  server.getOrdinal())
 					service.PushDelete(server, server.getBookmarkId());
 			}

@@ -15,7 +15,7 @@
 <stringAttribute key="attr.general.meid" value=""/>
 <stringAttribute key="attr.general.numberOfSecondsToWaitBeforeResponse" value=""/>
 <stringAttribute key="attr.general.pin" value="0x2100000A"/>
-<stringAttribute key="attr.general.simulatorDir" value="D:\Program Files\Eclipse\eclipse\plugins\net.rim.ejde.componentpack5.0.0_5.0.0.25\components\simulator"/>
+<stringAttribute key="attr.general.simulatorDir" value="C:\Program Files (x86)\eclipse\plugins\net.rim.ejde.componentpack5.0.0_5.0.0.25\components\simulator"/>
 <intAttribute key="attr.jre.type" value="0"/>
 <stringAttribute key="attr.memory.appHeapSize" value=""/>
 <stringAttribute key="attr.memory.brandingData" value=""/>
